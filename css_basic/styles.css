@@ -3,6 +3,27 @@ body {
   flex-direction: column;
   height: 100vh;
   margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+}
+header ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+header li {
+  margin-right: 20px;
+}
+header li a {
+  color: white;
+  text-decoration: none;
+}
+logo {
+  font-size: 2rem;
+  font-weight: bold;
 }
 main{
     display: flex;
@@ -14,16 +35,19 @@ article {
     overflow-y: auto;
     padding: 1em;
     background-color: #f0f0f0;
+    background-color: white;
+    border-radius: 10px;
 }
 aside{
     flex: 1;
     padding: 1em;
     overflow-y: auto;
     background-color: #e0e0e0;
+    border-left: 4px solid #ccc;
 }
 header, footer {
     background-color: #333;
     color: white;
-    padding: 1em;
     text-align: center;
+    padding: 10px;
 }
