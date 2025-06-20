@@ -1,0 +1,410 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.screen-size {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  gap: 2rem;
+  margin-left: -60px;
+  flex-direction: row-reverse;
+}
+
+.hamburger {
+  padding-top: 10px;
+  flex-shrink: 0;
+}
+#menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: block;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  margin-bottom: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+#menu-toggle:checked ~ .header .hamburger span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+#menu-toggle:checked ~ .header .hamburger span:nth-child(2) {
+  opacity: 0;
+}
+
+#menu-toggle:checked ~ .header .hamburger span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.menu {
+  display: none;
+}
+
+#menu-toggle:checked ~ header .menu {
+  display: block;
+}
+
+.image-container {
+  background-image: url("images/headphones_hero_1.jpg");
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 5px 5px 0 0;
+}
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 10px;
+}
+.logo {
+  width: 200px;
+}
+.header .menu ul {
+  list-style: none;
+  text-decoration: none;
+}
+.header .menu ul li {
+  padding: 20px;
+  transform: translateY(-10px);
+  animation: fadeSlideIn 0.4s ease forwards;
+}
+
+.menu ul li:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.menu ul li:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.menu ul li:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header .menu ul li a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.hero {
+  text-align: center;
+  color: white;
+
+  margin-top: 30px;
+  padding: 8px;
+}
+
+.hero .call-to-action-h2 {
+  padding-bottom: 10px;
+  font-size: 2rem;
+  line-height: 1.5;
+}
+.hero .call-to-action-p {
+  padding-bottom: 10px;
+  font-size: 1.3rem;
+}
+.btn {
+  padding: 15px 30px;
+  margin-top: 10px;
+  margin-bottom: 3rem;
+  border: none;
+  cursor: pointer;
+  background-color: #ff6565;
+  color: white;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  text-transform: uppercase;
+}
+.hero .detail {
+  line-height: 1.6;
+  padding-bottom: 7rem;
+}
+
+.music-section {
+  margin-top: 10rem;
+}
+.music-section > p {
+  text-align: center;
+  padding-bottom: 5rem;
+  line-height: 1.5;
+}
+
+.music-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 2rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+.music-grid-container img {
+  padding-bottom: 4rem;
+}
+
+.music-grid-container p {
+  padding-bottom: 4rem;
+  text-align: center;
+  line-height: 1.7;
+  width: 200px;
+  margin: 0 auto;
+}
+
+.pentagone-image-container {
+  background-image: url("images/headphones_hero_2.jpg");
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.results > p {
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  line-height: 1.5;
+  width: 100%;
+  padding-top: 10rem;
+}
+.pentagone-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+  gap: 3rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+.pentagone-section {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 40px auto;
+}
+
+.pentagone-section img {
+  width: 100%;
+  height: auto;
+}
+
+.pentagone-details {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  text-align: center;
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+
+.pentagone-details h2 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.pentagone-details p {
+  font-size: 0.85rem;
+  margin: 0.3rem 0 0;
+}
+
+form {
+  
+
+  margin: 0 auto;
+  max-width: 60%;
+  margin-top: 8rem;
+}
+form h3 {
+  text-align: center;
+  font-size: 2rem;
+  padding-bottom: 30px;
+}
+form label {
+  display: block;
+  margin-bottom: 10px;
+}
+form input {
+  margin-bottom: 20px;
+  width: 100%;
+  outline: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+footer {
+  background-color: #071629;
+  height: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+}
+
+.footer_nav {
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fa-brands {
+  font-size: 1.2rem;
+  margin: 0 10px;
+  color: #071629;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.fa-brands:active {
+  color: red;
+}
+.footer_section p {
+  padding-top: 5rem;
+  align-self: flex-end;
+  justify-self: center;
+  font-size: 0.8rem;
+  font-weight: 200;
+  color: #fff;
+}
+
+@media (min-width: 600px) {
+  .pentagone-details h2 {
+    font-size: 2rem;
+  }
+
+  .pentagone-details p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .hamburger {
+    display: none;
+  }
+  .menu {
+    display: block;
+  }
+  .menu ul {
+    display: flex;
+  }
+  .pentagone-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero .call-to-action-h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero .call-to-action-p {
+    font-size: 1.2rem;
+  }
+  .screen-size {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    width: 0%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .hamburger {
+    display: none;
+  }
+  .menu {
+    display: block;
+  }
+  .menu ul {
+    display: flex;
+  }
+  .hero {
+    margin-top: 6rem;
+  }
+  .detail {
+    margin-top: 3rem;
+  }
+  .btn {
+    margin-top: 3rem;
+  }
+  .results p {
+    width: 99%;
+  }
+
+  .music-section > p {
+    padding-top: 5rem;
+  }
+  .pentagone-grid,
+  .music-grid-container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4rem;
+  }
+
+  .pentagone-details h2 {
+    font-size: 2.5rem;
+  }
+
+  .pentagone-details p {
+    font-size: 1rem;
+  }
+
+  .screen-size {
+    width: 90%;
+    max-width: 1000px;
+  }
+  .footer_nav {
+    flex-direction: row;
+  }
+}
