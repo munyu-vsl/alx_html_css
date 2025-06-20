@@ -62,7 +62,9 @@ body {
 .menu {
   display: none;
 }
-
+.menu.active {
+  display: block;
+}
 #menu-toggle:checked ~ header .menu {
   display: block;
 }
